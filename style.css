@@ -1,3 +1,8 @@
+:root {
+    --green: #5F9E7E;
+    --orange: #E6A15C;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +16,7 @@
 .header {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
-    grid-template: 1fr 1.5fr / 2fr 1fr;
+    grid-template: 1fr 1fr / 2fr 1fr;
     border-bottom: 1px solid lightgray;
 }
 
@@ -55,7 +60,7 @@ form input {
 li button {
     height: 40px;
     width: 80px;
-    background-color: #5F9E7E;
+    background-color: var(--green);
     border-radius: 40px;
     color: white;
 }
@@ -69,6 +74,8 @@ li button {
     display: grid;
     grid-template-rows: 1fr 4fr 5fr;
     border-right: 1px solid lightgray;
+    background-color: var(--green);
+    color: white;
 }
 
 .sidebar-top {
@@ -116,6 +123,9 @@ li button {
     height: 200px;
     border: 1px solid lightgray;
     background-color: white;
+    border-left: 8px solid var(--orange);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .announcements-container {
