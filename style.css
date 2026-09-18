@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/font/SpaceGrotesk-Light.woff2') format('woff2'),
+        url('/font/SpaceGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
     --green: #5F9E7E;
     --orange: #E6A15C;
@@ -6,73 +16,135 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Space Grotesk';
 }
 
 .container {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 3fr;
+    grid-template: 0.75fr 4fr / 1fr 4fr;
 }
 
 .header {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 0.6fr 1fr / 2fr 1fr;
     border-bottom: 1px solid lightgray;
 }
 
 form {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 10px;
+    padding-left: 40px;
 }
 
 form button {
     width: 25px;
     height: 25px;
+    border: none;
+    background-color: white;;
 }
 
 form input {
     width: 70%;
     height: 30px;
     border-radius: 30px;
+    background-color: #d9e9e1;
+    border: none;
 }
 
 .header-top {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+}
+
+.small-circle {
+    height: 50px;
+    width: 50px;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: var(--orange);
+}
+
+.header-icon {
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-color: white;
+}
+
+.profile-name {
+    font-weight: 700; 
+    font-size: 20px;
 }
 
 .header-bottom {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 3fr;
+    grid-template: 1fr 1fr / 1fr 5fr;
+    padding-left: 40px;
+    align-items: center;
 }
 
 .header-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     list-style: none;
 }
 
 li button {
-    height: 40px;
-    width: 80px;
+    height: 35px;
+    width: 95px;
     background-color: var(--green);
     border-radius: 40px;
     color: white;
 }
 
-.large-profile {
+.small-profile {
+    height: 40px;
+    width: 40px;
+}
+
+.large-circle {
     grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border: 1px solid lightgray;
+    border-radius: 40px;
+    background-color: var(--orange);
+}
+
+.large-profile {
+    height: 70px;
+    width: 70px;
+}
+
+.greeting {
+    align-self: end;
+    font-weight: 700;
+}
+
+.greeting-name {
+    align-self: start;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
-    grid-template-rows: 1fr 4fr 5fr;
+    grid-template-rows: 1fr 2fr 4fr;
     border-right: 1px solid lightgray;
     background-color: var(--green);
     color: white;
@@ -84,6 +156,18 @@ li button {
     align-items: center;   
 }
 
+.dashboard-logo {
+    height: 50px;
+    width: 50px;
+    justify-self: center;
+    align-self: center;
+}
+
+.dashboard {
+    font-size: 30px;
+    font-weight: 900;
+}
+
 .sidebar-middle {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -92,8 +176,19 @@ li button {
 
 .sidebar-bottom {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template: 1fr 1fr 1fr 6fr / 1fr 3fr;
     align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-icon {
+    height: 25px;
+    width: 25px;
+    justify-self: center;
+}
+
+.sidebar-nav {
+    font-size: 20px;
 }
 
 .main-content {
@@ -128,6 +223,11 @@ li button {
     overflow: hidden;
 }
 
+.card-buttons {
+    height: 20px;
+    width: 20px;
+}
+
 .announcements-container {
     display: grid;
     grid-template-rows: 75px 1fr;
@@ -151,4 +251,31 @@ li button {
     grid-template: repeat(4, 1fr) / 1fr 2fr;
     border: 1px solid lightgray;
     background-color: white;
+    align-items: center;
+}
+
+.circle {
+    height: 50px;
+    width: 50px;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    justify-self: center;
+}
+
+.trend-profile {
+    width: 40px;
+    height: 40px;
+}
+
+.trend-tag {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.trend-name {
+    font-size: 12px;
 }
