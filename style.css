@@ -81,8 +81,13 @@ form input:hover {
 .header-icon {
     height: 25px;
     width: 25px;
-    border: none;
+    border: 1px solid white;
+    border-radius: 5px;
     background-color: white;
+}
+
+.header-icon:hover {
+    box-shadow: 1px 1px 5px var(--orange);
 }
 
 .profile-name {
@@ -114,7 +119,7 @@ li button {
 }
 
 button:hover {
-    box-shadow: 1px 1px 5px var(--orange);
+    box-shadow: 1px 1px 7px var(--orange);
 }
 
 button:active {
@@ -265,11 +270,12 @@ button:active {
 .card-buttons img {
     height: 25px;
     width: 25px;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 .card-buttons img:hover {
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--orange);
 }
 
 .announcements-container {
